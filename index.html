@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete ecommerce website</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+    <script>
+        function addToCart(itemName, itemPrice) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.push({ name: itemName, price: itemPrice });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert(`${itemName} has been added to your cart!`);
+            window.location.href = 'cart.html'; 
+        }
+    </script>
+
+
+
+
+    
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo">D'Shoes </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#products">products</a>
+        <a href="#featured">featured</a>
+        <a href="#review">review</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="content">
+                <span>Nike Red Predator 8 </span>
+                <h3>Nike Predator 8</h3>
+                <p>Nike's first lifestyle Predator max brings you style, comfort and big attitude in the Nike Predator 8. The design draws inspiration from Air Predator icons, showcasing Nike's greatest innovation with its large window and fresh array of colours.</p>
+                <a href="#" class="btn" onclick="addToCart('Nike Predator 8',10)">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="home-shoe-1.png" class="shoe" alt="">
+                <img src="home-text-1.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>Nike Blue Predator 8</span>
+                <h3>Nike Predator 8</h3>
+                <p>Nike's first lifestyle Predator max brings you style, comfort and big attitude in the Nike Predator 8. The design draws inspiration from Air Predator icons, showcasing Nike's greatest innovation with its large window and fresh array of colours.</p>
+                <a href="#" class="btn" onclick="addToCart('Nike Predator 8',10)">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="home-shoe-2.png" class="shoe" alt="">
+                <img src="home-text-2.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>Nike Yellow Predator 8</span>
+                <h3>Nike Predator 8 </h3>
+                <p>Nike's first lifestyle Predator max brings you style, comfort and big attitude in the Nike Predator 8. The design draws inspiration from Air Predator icons, showcasing Nike's greatest innovation with its large window and fresh array of colours.</p>
+                <a href="#" class="btn" onclick="addToCart('Nike Predator 8',10)">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="home-shoe-3.png" class="shoe" alt="">
+                <img src="home-text-3.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- service section starts  -->
+
+<section class="service">
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>fast delivery</h3>
+            <p>We provide fast delivery</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-undo"></i>
+            <h3>10 days replacements</h3>
+            <p>Can replace the product in 10  days</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-headset"></i>
+            <h3>24 x 7 support</h3>
+            <p>We provide 24x7 support to the customers</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- service section ends -->
+
+<!-- products section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> latest <span>products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="product-1.png" alt="">
+            <div class="content">
+                <h3>Nike Journey Run </h3>
+                <div class="price">₹10 <span>₹15,000</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn" onclick="addToCart('Nike Journey Run Men', 9999)">add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="product-2.png" alt="">
+            <div class="content">
+                <h3>Nike Revolution 7</h3>
+                <div class="price">₹10 <span>₹12,999</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn" onclick="addToCart('Nike Revolution 7', 7000)">add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="product-3.png" alt="">
+            <div class="content">
+                <h3>Jordan Stadium 90</h3>
+                <div class="price">₹10 <span>₹9,999</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn" onclick="addToCart('Jordan Stadium 90 ', 6999)">add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="product-4.png" alt="">
+            <div class="content">
+                <h3>Nike Full Force Low</h3>
+                <div class="price">₹10 <span>₹12,999</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn" onclick="addToCart('Nike Full Force Low ', 9999)">add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="product-5.png" alt="">
+            <div class="content">
+                <h3>Nike Dunk Low</h3>
+                <div class="price">₹10 <span>₹14,999</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn" onclick="addToCart('Nike Dunk Low', 12888)">add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="product-6.png" alt="">
+            <div class="content">
+                <h3>Nike Impact 4</h3>
+                <div class="price">₹10 <span>₹11,999</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn" onclick="addToCart('Nike Impact 4', 8000)">add to cart</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- products section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>featured</span> products </h1>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="f-img-1.1.png" class="featured-image-1" alt="">
+                <img src="f-img-1.2.png" class="featured-image-1" alt="">
+                <img src="f-img-1.3.png" class="featured-image-1" alt="">
+                <img src="f-img-1.4.png" class="featured-image-1" alt="">
+            </div>
+            <div class="big-image">
+                <img src="f-img-1.1.png" class="big-image-1" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>Air Jordan Legacy 312 Low</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Celebrate MJ's legacy with this shout-out to Chicago's 312 area code. With elements from three iconic Jordans (the AJ3, AJ1 and Air Alpha Force), it's a modern mash-up that reps the best.</p>
+            <div class="price">₹10 <span>₹13,999</span></div>
+            <a href="#" class="btn" onclick="addToCart('Air Jordan Legacy 312 Low', 11999)">add to cart</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="f-img-2.1.png" class="featured-image-2" alt="">
+                <img src="f-img-2.2.png" class="featured-image-2" alt="">
+                <img src="f-img-2.3.png" class="featured-image-2" alt="">
+                <img src="f-img-2.4.png" class="featured-image-2" alt="">
+            </div>
+            <div class="big-image">
+                <img src="f-img-2.1.png" class="big-image-2" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>Nike Downshifter 12</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Take those first steps on your running journey in the Nike Downshifter 12. Made from at least 20% recycled content by weight, it has a supportive fit and stable ride, with a lightweight feel that easily transitions from your workout to hangout.</p>
+            <div class="price">₹10 <span>₹7,999</span></div>
+            <a href="#" class="btn" onclick="addToCart('Nike Downshifter 12', 3797)">add to cart</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="f-img-3.1.png" class="featured-image-3" alt="">
+                <img src="f-img-3.2.png" class="featured-image-3" alt="">
+                <img src="f-img-3.3.png" class="featured-image-3" alt="">
+                <img src="f-img-3.4.png" class="featured-image-3" alt="">
+            </div>
+            <div class="big-image">
+                <img src="f-img-3.1.png" class="big-image-3" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>Nike InfinityRN</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>The new Nike InfinityRN shoes bring together style, comfort, and innovation in a fresh design for sneaker lovers and athletes alike. Known for its signature Air cushioning technology, this latest model features an enhanced air unit for superior shock absorption and a lightweight feel, making it ideal for long wear and high performance. .</p>
+            <div class="price">₹10 <span>₹19,999</span></div>
+            <a href="#" class="btn" onclick="addToCart('Nike Journey Run', 14999)">add to cart</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="Screenshot 2024-10-25 at 8.30.30 PM.png" alt="">
+            <h3>Aadit Raj Thakur</h3>
+            <p>Perfect Fit and Unmatched Comfort!</p>
+            <p>"I've always struggled to find shoes that are both comfortable and stylish, but this pair hit the mark! They’re true to size and provide great support even after hours of walking. I wear them almost daily now, and they still look new. I love how versatile they are; they look great with both casual and semi-formal outfits. Highly recommended for anyone looking for both style and comfort!"</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Screenshot 2024-10-25 at 8.29.34 PM.png" alt="">
+            <h3>Devbrat Singh</h3>
+            <p>Durable and Great Value for Money!</p>
+            <p>"I've had these shoes for about three months now, and they still look fantastic! I usually wear them on my daily commutes, and they hold up well even in rough weather. The materials feel premium and durable, and the grip is excellent. For the price, I couldn't ask for a better deal. Will definitely purchase from this site again!"</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Screenshot 2024-10-25 at 8.31.24 PM.png" alt="">
+            <h3>Aman Mishra</h3>
+            <p>Excellent Quality, But Sizing Runs Small</p>
+            <p>"The quality of these shoes is exceptional! The stitching, materials, and attention to detail make them look way more expensive than they are. They offer good support and cushioning, but I recommend going half a size up if you have wider feet or plan to wear them with thicker socks. Other than that, they’re a great purchase, and the delivery was quick and hassle-free!".</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- newsletter section starts  -->
+
+<section class="newsletter">
+
+    <div class="content">
+        <h3>Contact Us</h3>
+        <p>Please reach out to us via email, phone, or social media, and we’ll make sure your experience with us is exceptional!"</p>
+        <form action="">
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="submit" value="send" class="btn">
+        </form>
+    </div>
+
+</section>
+
+<!-- newsletter section ends -->
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our stores</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">paris</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">products</a>
+            <a href="#">featured</a>
+            <a href="#">review</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my favorite</a>
+            <a href="#">my orders</a>
+            <a href="#">newsletter</a>
+        </div>
+
+        
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/">facebook</a>
+            <a href="https://x.com/Dej122198">twitter</a>
+            <a href="https://www.instagram.com/dev.jarsaniya/">instagram</a>
+            <a href="https://www.linkedin.com/in/dev-jarsaniya-0491b1276/">linkedin</a>
+        </div>
+
+        <div class="credit">created by <span> DEV JARSANIYA </span> | all rights reserved</div>
+
+    </div>
+
+</section>
+
+
+
+
+<script src="script.js"></script>
+    
+</body>
+</html>
